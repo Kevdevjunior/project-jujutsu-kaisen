@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #470011;
+    color: #ffffff;
+    font-family: Segoe Print;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+}
+
+#burger {
+	display: none;
+}
+
+
+nav {
+  transform: scaleX(0);
+  transition: 1s;
+  transform-origin: 100%;
+}
+
+header nav a {
+    text-decoration: none;
+    float: right;
+    color: #ffffff;
+    padding: 48px 40px;
+    font-size: 19px;
+    text-transform: uppercase;
+    
+}
+
+header nav a:hover {
+    color: black;
+	  background-color: #ffffff;
+	  transition: 0.5s;
+}
+
+.logo {
+    
+    width: 20%;
+    float: left;
+    padding: 25px;
+    transform: scaleX(0);
+    transition: 1s;
+    transform-origin: 0%;
+    
+}
+
+
+.clear {
+    clear: both;
+}
+
+/*---------- first section histoire -----------*/
+
+h1 {
+  background-color: black;
+  padding: 20px;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+#histoire {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+
+}
+
+.history {
+  width: 30%;
+  background-color: black;
+  color: #FF7E00;
+  padding: 35px;
+  /* transform: scaleX(0); */
+  /* opacity: 0;
+  transform: translateY(-30px);    */
+}
+
+.history p {
+  font-size: 20px;
+}
+
+#yuta {
+  background-color: #470011;
+  padding: 75px 75px 75px 75px;
+}
+
+
+/* ------end first section ---------*/
+
+
+/*-------------second section Personnage--------------*/
+.mycard {
+    height: 100%;
+    width: 100%;
+    max-width: 24rem;
+    background-color: #470011;
+  }
+  .cardtitle {
+    font-weight: bold;
+    --tw-text-opacity: 1;
+    color: rgba(31, 41, 55, var(--tw-text-opacity));
+    text-align: center;
+  }
+  .cardimg {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.75rem;
+    margin-bottom: 2.75rem;
+    /*max-height: 6rem;*/
+  }
+  .carddescription {
+    --tw-text-opacity: 1;
+    color: rgba(107, 114, 128, var(--tw-text-opacity));
+    text-align: center;
+  }
+
+  .slider {
+    width: 100%;
+  
+    min-height: 385px;
+  }
+  .slider input {
+    display: none;
+  }
+  .testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 799px;
+    perspective: 500px;
+    margin-top: 5rem;
+    overflow: hidden;
+  }
+  .testimonials .item {
+    max-width: 20rem;
+    border-radius: 1.5rem;
+    border-width: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgba(30, 58, 138, var(--tw-border-opacity));
+    top: 0;
+    position: absolute;
+    /*box-sizing: border-box;*/
+    background-color: white;
+    padding: 30px;
+    width: 550px;
+    text-align: center;
+    transition: transform 0.4s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    cursor: pointer;
+  }
+  .testimonials .item img {
+    /*width: 100px;*/
+    width: 55%;
+    cursor: help;
+  }
+
+  .testimonials .item p {
+    color: #FF7E00;
+   
+  }
+
+  .testimonials .item h2 {
+    font-size: 14px;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dots label {
+    display: block;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #413b52;
+    margin: 7px;
+    transition: transform 0.2s, color 0.2s;
+  }
+
+
+  /*first animation card*/
+
+  #t-1:checked ~ .dots label[for="t-1"] {
+    transform: scale(2);
+    background-color: #fff;
+  }
+  #t-1:checked ~ .dots label[for="t-2"] {
+    transform: scale(1.5);
+  }
+  #t-1:checked ~ .testimonials label[for="t-1"] {
+    z-index: 4;
+  }
+  #t-1:checked ~ .testimonials label[for="t-2"] {
+    transform: translateX(300px) translateZ(-90px) translateY(-15px);
+  
+    z-index: 3;
+  }
+  #t-1:checked ~ .testimonials label[for="t-3"] {
+    transform: translateX(600px) translateZ(-180px) translateY(-30px);
+    z-index: 2;
+  }
+  #t-1:checked ~ .testimonials label[for="t-4"] {
+    transform: translateX(900px) translateZ(-270px) translateY(-45px);
+    z-index: 1;
+  }
+  #t-1:checked ~ .testimonials label[for="t-5"] {
+    transform: translateX(1200px) translateZ(-360px) translateY(-60px);
+  }
+  
+  /* Second animation card*/
+  #t-2:checked ~ .dots label[for="t-1"] {
+    transform: scale(1.5);
+  }
+  #t-2:checked ~ .dots label[for="t-2"] {
+    transform: scale(2);
+    background-color: #fff;
+  }
+  #t-2:checked ~ .dots label[for="t-3"] {
+    transform: scale(1.5);
+  }
+  #t-2:checked ~ .testimonials label[for="t-1"] {
+    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+  }
+  #t-2:checked ~ .testimonials label[for="t-2"] {
+    z-index: 3;
+  }
+  #t-2:checked ~ .testimonials label[for="t-3"] {
+    transform: translateX(300px) translateZ(-90px) translateY(-15px);
+    z-index: 2;
+  }
+  #t-2:checked ~ .testimonials label[for="t-4"] {
+    transform: translateX(600px) translateZ(-180px) translateY(-30px);
+    z-index: 1;
+  }
+  #t-2:checked ~ .testimonials label[for="t-5"] {
+    transform: translateX(900px) translateZ(-270px) translateY(-45px);
+  }
+  
+  /* Third animation card*/
+  #t-3:checked ~ .dots label[for="t-2"] {
+    transform: scale(1.5);
+  }
+  #t-3:checked ~ .dots label[for="t-3"] {
+    transform: scale(2);
+    background-color: #fff;
+  }
+  #t-3:checked ~ .dots label[for="t-4"] {
+    transform: scale(1.5);
+  }
+  #t-3:checked ~ .testimonials label[for="t-1"] {
+    transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+  }
+  #t-3:checked ~ .testimonials label[for="t-2"] {
+    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+  }
+  #t-3:checked ~ .testimonials label[for="t-3"] {
+    z-index: 3;
+  }
+  #t-3:checked ~ .testimonials label[for="t-4"] {
+    transform: translateX(300px) translateZ(-90px) translateY(-15px);
+    z-index: 2;
+  }
+  #t-3:checked ~ .testimonials label[for="t-5"] {
+    transform: translateX(600px) translateZ(-180px) translateY(-30px);
+  }
+  
+  /* Fourth animation card*/
+  #t-4:checked ~ .dots label[for="t-3"] {
+    transform: scale(1.5);
+  }
+  #t-4:checked ~ .dots label[for="t-4"] {
+    transform: scale(2);
+    background-color: #fff;
+  }
+  #t-4:checked ~ .dots label[for="t-5"] {
+    transform: scale(1.5);
+  }
+  #t-4:checked ~ .testimonials label[for="t-1"] {
+    transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+  }
+  #t-4:checked ~ .testimonials label[for="t-2"] {
+    transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+  }
+  #t-4:checked ~ .testimonials label[for="t-3"] {
+    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+    z-index: 2;
+  }
+  #t-4:checked ~ .testimonials label[for="t-4"] {
+    z-index: 3;
+  }
+  #t-4:checked ~ .testimonials label[for="t-5"] {
+    transform: translateX(300px) translateZ(-90px) translateY(-15px);
+  }
+  
+  /* Fifth animation card*/
+  #t-5:checked ~ .dots label[for="t-4"] {
+    transform: scale(1.5);
+  }
+  #t-5:checked ~ .dots label[for="t-5"] {
+    transform: scale(2);
+    background-color: #fff;
+  }
+  #t-5:checked ~ .testimonials label[for="t-1"] {
+    transform: translateX(-1200px) translateZ(-360px) translateY(-60px);
+  }
+  #t-5:checked ~ .testimonials label[for="t-2"] {
+    transform: translateX(-900px) translateZ(-270px) translateY(-45px);
+    z-index: 1;
+  }
+  #t-5:checked ~ .testimonials label[for="t-3"] {
+    transform: translateX(-600px) translateZ(-180px) translateY(-30px);
+    z-index: 2;
+  }
+  #t-5:checked ~ .testimonials label[for="t-4"] {
+    transform: translateX(-300px) translateZ(-90px) translateY(-15px);
+    z-index: 3;
+  }
+  #t-5:checked ~ .testimonials label[for="t-5"] {
+    z-index: 4;
+  }
+
+  /* -------------end second section------------ */
+
+
+
+
+
+  /* -----------third section FAQ-------------- */
+
+.php {
+    padding: 25px;
+    background-color: #470011;
+    color: white; 
+    text-align: center;
+    width: 25%;
+    margin: auto;
+} 
+
+
+#faq {
+  background-color: black;
+  padding-bottom: 25px;
+}
+
+
+form {
+    width: 75%;
+    margin: auto;
+}
+
+label {
+  margin-bottom: 24px;
+  color: white;
+  display: block;
+} 
+
+#message {
+  height: 95px;
+  width: 65%;
+  border-radius: 10px;
+  border: 1px dashed #2f3e5b;
+  margin-bottom: 26px;
+} 
+
+ #pseudo {
+  width: 65%;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px dashed #2f3e5b;
+  margin-bottom: 26px;
+} 
+
+button {
+  width: 125px;
+  height: 45px;
+  background-color: white;
+  color: black;
+  margin: auto;
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid white;
+}
+
+#talk {
+    border: 5px solid white;
+    width: 45%;
+    padding: 25px;
+    margin: 45px auto;
+    border-radius: 10px;
+}
+
+#card{
+    margin: 50px auto;
+    width: 75%; 
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+#cardbody {
+    margin: 50px auto;
+    width: auto; 
+    padding: 20px;
+    border: 1px solid white; 
+    border-radius: 10px;
+
+}
+
+#cardtitle {
+    text-decoration: underline;
+    padding: 10px;
+} 
+
+/* -------------end third section------------ */
+
+
+/* --------------footer------------- */
+
+footer {
+  padding: 25px 0;
+  /* background-color: black;   */
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+footer a:hover {
+  color: #FF7E00;
+  
+}
+
+/* ------responsive------  */
+
+@media screen and (max-width: 1050px) {
+
+    #histoire {
+        display: block;
+    }
+
+    .history {
+        width: auto;
+    }
+
+    #yuta {
+       
+        width: auto;
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #menu {
+        width: 90%;
+    }
+
+    #yuta {
+        width: auto;
+    }
+
+
+    #t-2:checked ~ .testimonials label[for="t-1"] {
+        transform: unset;
+        display: contents;
+    }
+
+    #t-2:checked ~ .testimonials label[for="t-2"] {
+        transform: unset;
+        display: contents;
+    }
+
+    #t-2:checked ~ .testimonials label[for="t-3"] {
+        transform: unset;
+        display: contents;
+    }
+
+    #t-2:checked ~ .testimonials label[for="t-4"] {
+        transform: unset;
+        display: contents;
+    }
+
+    
+    .testimonials {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    .dots {
+        display: none
+    }
+
+
+}
+
+
+@media screen and (max-width: 752px) {
+
+    #burger {
+		float: right;
+	    width: 40px;
+	    padding: 16px;
+	    display: block;
+	}
+
+    nav {
+		float: none;
+		display: none;
+		clear: both;
+	}
+
+     header nav a {
+		display: block;
+	    width: 100%;
+	    text-align: center;
+	    box-sizing: border-box;
+	} 
+    
+}
+
+@media screen and (max-width: 650px) {
+
+    #yutaa {
+        width: 100%;
+    }
+    
+}
